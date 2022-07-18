@@ -1,0 +1,137 @@
+nav {
+    width: 100vw;
+    height: 60px;
+    // overflow: hidden;
+    background-color: $--color-nav-background;
+
+    .container {
+        height: 100%;
+        max-width: 95vw;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .row {
+            gap: 1rem;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+
+            .switch {
+                position: relative;
+                display: inline-block;
+                width: 40px;
+                height: 20px;
+            }
+
+            .switch input {
+                opacity: 0;
+                width: 0;
+                height: 0;
+            }
+
+            .slider {
+                position: absolute;
+                cursor: pointer;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: #ccc;
+                -webkit-transition: .4s;
+                transition: .4s;
+            }
+
+            .slider:before {
+                position: absolute;
+                content: "";
+                height: 15px;
+                width: 15px;
+                left: 3px;
+                bottom: 3px;
+                background-color: white;
+                -webkit-transition: .4s;
+                transition: .4s;
+            }
+
+            input:checked+.slider {
+                background-color: #FF0000;
+            }
+
+            input:focus+.slider {
+                box-shadow: 0 0 1px #FF0000;
+            }
+
+            input:checked+.slider:before {
+                -webkit-transform: translateX(18px);
+                -ms-transform: translateX(18px);
+                transform: translateX(18px);
+            }
+
+            /* Rounded sliders */
+            .slider.round {
+                border-radius: 12px;
+            }
+
+            .slider.round:before {
+                border-radius: 50%;
+            }
+
+            .small {
+                width: 24px;
+            }
+
+            .logo {
+                width: 120px;
+            }
+
+            svg {
+                fill: $--color-white;
+            }
+
+            .search_box {
+                width: 40vw;
+                display: flex;
+
+                input {
+                    padding: .3em;
+                    width: 35vw;
+                    background-color: $--color-background;
+                    border: 1px solid $--color-input-border;
+                    color: $--color-white;
+                }
+
+                .small {
+                    padding: .3em;
+                    width: 40px;
+                    background-color: $--color-search-background;
+                }
+            }
+
+            button {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 6rem;
+                height: 40px;
+                border-radius: 3px;
+                background: transparent;
+                border: 1px solid $--color-btn;
+                color: $--color-btn;
+
+                p {
+                    font-size: .9rem;
+                }
+
+                svg {
+                    fill: $--color-btn;
+                }
+            }
+        }
+
+    }
+
+}

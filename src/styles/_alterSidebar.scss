@@ -1,0 +1,24 @@
+.alter_sidebar{
+    width: 7vw;
+    background-color: $--color-nav-background;
+    color: $--color-white;
+    
+    ul{
+        padding: 1em 0;
+        margin: 0;
+        
+        li{
+            padding: .5em .2em;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            gap: .3em;
+            
+            p{
+                font-size: .725rem;
+            }
+        }
+    }
+}
