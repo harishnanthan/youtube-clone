@@ -1,0 +1,32 @@
+.card-game {
+    // height: 100vw;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    background-color: #ccc;
+    color: $--color-background;
+    height: 100vh;
+    flex-direction: column;
+    h1{
+        font-size: 2rem;
+        text-align: center;
+        padding: 1em 0;
+        font-weight: 900;
+    }
+    .card-container {
+        height: 30vw;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+        width: 90vw;
+        margin: auto;
+        gap: 1em;
+        justify-items: center;
+        button {
+            background-color: #FF0000;
+            width: 10em;
+            height: 10em;
+            border: 1px solid $--color-background;
+        }
+    }
+
+}

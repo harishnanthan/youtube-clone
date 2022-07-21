@@ -7,14 +7,17 @@ import "./styles/global.scss";
 
 import App from "./App";
 import { Provider } from "react-redux";
+import { BrowserRouter } from "react-router-dom";
 
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
 
 root.render(
   // <StrictMode>
+  <BrowserRouter>
     <Provider store={store}>
-      <App/>
+      <App />
     </Provider>
+  </BrowserRouter>
   // </StrictMode>
 );

@@ -5,7 +5,7 @@ import React, { Component } from "react";
 export default class Card extends Component {
   constructor(props) {
     super(props);
-    console.log(props);
+    // console.log(props);
     
     //when you click a img or chennal name, it's redirect to the youtube 
     this.redirect = () => {
@@ -32,8 +32,8 @@ export default class Card extends Component {
                 <img src="http://unsplash.it/50/50?gravity=center" alt=""/>
             </div>
             <div className="card_subdetails">
-                <div className="title">{this.props.data.snippet.title ||  <Skeleton  count={2}/> }</div>
-                <div className="chennal_name" onClick={this.redirectChennal}>{this.props.data.snippet.channelTitle ||  <Skeleton count={1} /> }</div>
+                <div className="title">{this.props.data.snippet.title }</div>
+                <div className="chennal_name" onClick={this.redirectChennal}>{this.props.data.snippet.channelTitle }</div>
             </div>
         </div>
       </div>

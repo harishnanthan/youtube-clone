@@ -21,13 +21,14 @@ class Navigation extends React.Component {
     // console.log(props)
   }
 
-  shouldComponentUpdate(nextProps) {
-    // console.log(nextProps) //updated 
-    // console.log(this.props) // prev
-    console.log("NAVIGATION SHOULD COMPONENT UPDATE")
-    if (this.props._preview || !this.props._preview)
-      return false
-  }
+  // should component update have a two parameter (nextProps,nextState)
+  // shouldComponentUpdate(nextProps) {
+  //   // console.log(nextProps) //updated 
+  //   // console.log(this.props) // prev
+  //   console.log("NAVIGATION SHOULD COMPONENT UPDATE")
+  //   if (this.props._preview || !this.props._preview)
+  //     return false
+  // }
 
   handleChange = e => {
     const { name, value } = e.target
@@ -42,9 +43,14 @@ class Navigation extends React.Component {
     this.props.fetchVideos(this.state.search)
   }
 
+  // componentDidUpdate(prevState){
+  //   console.log("COPONNENT DID UPDATE")
+  //   console.log(prevState)
+  // }
+
   render() {
     console.log("NAV_RENDER")
-    // console.log(this.props)
+    console.log("CHECK",this.props)
     // console.log(this.props._theme)
     return (
       <nav>

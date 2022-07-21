@@ -1,37 +1,26 @@
 import React from "react";
-import { connect } from "react-redux";
-import Hero from "./components/Hero.component";
-import Navigation from "./components/Navigation.component";
-import Sidebar from "./components/Sidebar.component";
+import { Route, Routes } from "react-router-dom";
+import CardGame from "./components/CardGame.component";
+import YoutubeComponent from "./components/Youtube.component";
+
 
 class App extends React.Component {
   // constructor(props){
-    // super(props)
-    // console.log(props)
+  // super(props)
+  // console.log(props)
   // }
 
 
   render() {
-
     return (
-      <div>
-        <Navigation />
-        <main>
-          <Sidebar />
-          <Hero />
-        </main>
-      </div>
+      <Routes>
+        <Route index element={<YoutubeComponent />}/>
+        <Route path="/cardgame" element={<CardGame/>}/>
+      </Routes>
+      
     );
   }
 }
 
-const mapStateToProps = state =>{
-  console.log("MSTP HOME")
-  // console.log(state.preview)
-  return {_preview : state.preview}
-}
 
-// console.log(App)
-export default connect(mapStateToProps,null) (App);
-
-
+export default App;
